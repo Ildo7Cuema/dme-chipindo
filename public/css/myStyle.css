@@ -1,0 +1,35 @@
+@page{
+	margin: 0cm 0cm;
+	font-size: 1m;
+}
+body{
+	margin: 4cm 1.5cm 1.5cm;
+	font-family:Arial, sans-serif;
+	text-align: justify;
+}
+
+header {
+	position: fixed;
+	top: 0.1cm;
+	left: 0cm;
+	right: 0cm;
+	height: 2cm;
+	text-align: center;
+	line-height: 18px;
+	text-transform: uppercase;
+}
+
+
+footer {
+	position: fixed;
+	bottom: 2.5cm;
+	left: 0cm;
+	right: 0cm;
+	height: 0cm;
+	line-height: 0px;
+	font-family:Arial, sans-serif;
+	font-size: 10px;
+	color: gray;
+
+}
+
