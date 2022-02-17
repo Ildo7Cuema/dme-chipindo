@@ -17,5 +17,5 @@
 		<div class="col-12 font-weight-bold">Governo Provincial da Huíla</div>
 		<div class="col-12 font-weight-bold">Administração Municipal do Chipindo</div>
 		<div class="col-12 font-weight-bold">Direcção Municipal da Educação</div>
-		<div class="col-12 d-flex justify-content-center">_________________________________________________________________________</div>
+		<div class="col-12 d-flex justify-content-center">____________________________________________________________________________</div>
 	</header>

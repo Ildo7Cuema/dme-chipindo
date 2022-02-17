@@ -9,7 +9,10 @@ use PDF;
 use App\Models\admin\funcionario;
 use App\Models\admin\categoria;
 use App\Models\admin\escola;
+use App\Models\admin\emolumento;
+use App\Models\admin\Secretaria\db_control_doc;
 use Carbon\Carbon;
+use DB;
 
 class declaracaoServico extends Controller
 {
@@ -91,8 +94,11 @@ class declaracaoServico extends Controller
         //adicionar funç]ao do interino
         $funcAssinanteInterino = $designacaoEntidadeAssinante == 'Na ausência do Director Municipal' ? "(".$request->funcInterino.")": '';
 
-
-
+        //buscar o total na tabela de db_control_docs para atribuir a ordem de saida do documento
+        //busca pelo id o emolumento
+        $nomeEmolumento = emolumento::find($request->emolumento);
+        $contaDoc = DB::table('db_control_docs')->where('nomeDoc', $nomeEmolumento->emolumentos)->where('ano', date('Y'))->count();
+        $numDeSaidaDocumento = "0".$contaDoc + 1;
 
         $pdf = PDF::loadView('escola.desclaracaoServico.declaracaoDeServico', [
             'mesAno' => $mesAno,
@@ -127,6 +133,7 @@ class declaracaoServico extends Controller
             'professorOuProfessora'=>$professorProfessora,
             'artigoAntecedenteDeEntidade'=>$artigoAntecedenteDeEntidade,
             'funcAssinanteInterino'=>$funcAssinanteInterino,
+            'numDeSaidaDocumento'=>$numDeSaidaDocumento,
         ]);
 
         return $pdf->stream('Declaração_de_serviço.pdf');

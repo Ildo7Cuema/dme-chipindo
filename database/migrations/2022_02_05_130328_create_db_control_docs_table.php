@@ -16,8 +16,8 @@ class CreateDbControlDocsTable extends Migration
         Schema::create('db_control_docs', function (Blueprint $table) {
             $table->id();
             $table->string('nomeDoc');
-            $table->string('numDeOrdem');
             $table->string('dataSaida');
+            $table->string('ano');
             $table->string('beneficiario');
             $table->string('funcionario');
             $table->timestamps();

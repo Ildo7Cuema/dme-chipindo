@@ -21,7 +21,7 @@ class CreateEscolasTable extends Migration
             $table->string('provincia');
             $table->string('municipio');
             $table->string('localizacao');
-            $table->string('numZip');
+            $table->string('numZip')->nullable();
             $table->string('tipoConstrucao');
             $table->string('formaJuridica');
             $table->string('directorDaEscola');

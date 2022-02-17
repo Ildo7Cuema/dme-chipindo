@@ -5,7 +5,7 @@
         <div class="row">
             <div class="form-group col-12 text-center">
 
-                    <strong>DECLARAÇÃO DE SERVIÇO Nº 00 / <span style="text-transform: uppercase;">{{ $mesAno }}</span></strong>
+                    <strong>DECLARAÇÃO DE SERVIÇO Nº 0{{ $numDeSaidaDocumento }} / <span style="text-transform: uppercase;">{{ $mesAno }}</span></strong>
 
             </div>
         </div>
